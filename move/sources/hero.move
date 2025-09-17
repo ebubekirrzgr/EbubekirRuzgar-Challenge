@@ -22,9 +22,9 @@ public fun create_hero(name: String, image_url: String, power: u64, ctx: &mut Tx
     
     let hero = Hero {
         id: object::new(ctx),
-        name,
-        image_url,
-        power,
+        name: name,
+        image_url : image_url,
+        power: power,
     };
 
     transfer::public_transfer(hero, ctx.sender());
